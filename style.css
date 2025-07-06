@@ -1,0 +1,95 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top to make space for controls */
+    min-height: 100vh;
+    color: #333;
+}
+
+.drawing-app-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+.controls {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Space between controls */
+    flex-wrap: wrap; /* Allow controls to wrap on small screens */
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+#colorPicker {
+    -webkit-appearance: none; /* Remove default browser styling for color input */
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    width: 40px; /* Adjust size */
+    height: 40px;
+    background-color: transparent; /* Make background transparent */
+    cursor: pointer;
+    border-radius: 5px; /* Add some border radius */
+    overflow: hidden; /* Hide the default color well */
+}
+
+#colorPicker::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+#colorPicker::-webkit-color-swatch {
+    border: 2px solid #ddd; /* Add a subtle border */
+    border-radius: 5px;
+}
+
+#colorPicker::-moz-color-swatch,
+#colorPicker::-moz-focus-inner {
+    border: none;
+    padding: 0;
+}
+
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#drawingCanvas {
+    border: 2px solid #ccc; /* Border around the canvas */
+    background-color: #fcfcfc; /* Slightly off-white canvas background */
+    cursor: crosshair; /* Indicate drawing mode */
+    display: block; /* Remove extra space below canvas */
+    margin: 0 auto; /* Center the canvas */
+}
